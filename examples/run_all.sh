@@ -26,4 +26,4 @@ python extract_concepts.py \
     --model-dir "$OUT/classifier" \
     --output-dir "$OUT/concepts"
 
-echo "Done. Concepts in $OUT/concepts/{proposed,clustered}_concepts.json"
+echo "Done. Concepts in $OUT/concepts/final_concepts.json"
