@@ -4,3 +4,4 @@ runs/
 captions/
 data/
 *.egg-info/
+.DS_Store

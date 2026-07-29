@@ -1,5 +1,34 @@
 # CaBM — Caption Bottleneck Models
 
+<p align="center">
+  <a href="https://arxiv.org/abs/2607.00578"><strong>Paper</strong></a>
+  &nbsp;|&nbsp;
+  <a href="https://github.com/bariscagliyan/CaptionBottleneckModels"><strong>Code</strong></a>
+</p>
+
+<p align="center">
+  <strong>Seref Baris Cagliyan</strong> &nbsp;·&nbsp;
+  <strong>Umut Ozdemir</strong> &nbsp;·&nbsp;
+  <strong>Merve Tapli</strong> &nbsp;·&nbsp;
+  <strong>Emre Akbas</strong>
+</p>
+
+<p align="center">
+  <em>Accepted to ECCV 2026</em>
+</p>
+
+<p align="center">
+  <img src="figures/methodology_diagram.png" alt="Overview of Caption Bottleneck Models" width="100%">
+</p>
+
+<p align="center">
+  <em>Overview of CaBM: multi-caption generation with taxonomy censoring, text-only classification, and post-hoc open-vocabulary concept discovery.</em>
+</p>
+
+CaBM is the official implementation of the paper
+[**Caption Bottleneck Models**](https://arxiv.org/abs/2607.00578), accepted to
+**ECCV 2026**.
+
 CaBM performs image recognition **entirely through text**: a frozen vision-language
 model turns each image into several censored captions, a text classifier predicts the
 label from those captions, and per-class **concepts** are then extracted from the trained
