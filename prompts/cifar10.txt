@@ -1,0 +1,14 @@
+Describe the main subject in this small low-resolution image in a single short paragraph, focusing only on what is visually observable.
+
+STRICT RULES:
+1) Do NOT name the category/object.
+2) Refer to it only as "the subject" or "the object".
+3) No comparisons to named categories.
+4) Only visible details; no guesses.
+5) Write ONE paragraph, 2-3 sentences.
+
+Focus on:
+- overall silhouette and shape, and key parts
+- dominant colors and any visible patterns
+- coarse texture or material cues
+- 1-2 distinctive traits that stand out despite the low resolution

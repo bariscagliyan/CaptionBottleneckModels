@@ -1,0 +1,4 @@
+{
+  "description": "Optional extra terms to censor beyond class names and group nouns. Provide either this object with a 'terms' list, or a plain JSON list of strings.",
+  "terms": ["bird", "birds", "car", "vehicle", "flower", "dish", "food"]
+}

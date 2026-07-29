@@ -1,0 +1,10 @@
+torch>=2.1
+transformers>=4.57
+accelerate>=0.30
+datasets>=2.18
+safetensors
+numpy
+pillow
+scikit-learn
+hdbscan
+tqdm

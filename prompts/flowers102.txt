@@ -1,0 +1,16 @@
+Describe the flower in this image in a single detailed paragraph, focusing only on what is visually observable so it can be distinguished from similar-looking flowers.
+
+STRICT RULES:
+1) Do NOT name the species or any plant family/group.
+2) Refer to it only as "the subject" or "the flower".
+3) Do NOT make comparisons to named species.
+4) Describe only visible details; do not guess.
+5) Write ONE paragraph of 3-6 sentences.
+
+Where visible, cover:
+- petal color, gradients, and any spots, stripes, or veining
+- petal shape, count, edges, and overall bloom shape
+- the center: stamens, pistil, disc, and their color
+- texture of petals and surface (glossy, velvety, ridged)
+- leaves, stem, and buds if shown
+- the most distinctive markings and their spatial arrangement

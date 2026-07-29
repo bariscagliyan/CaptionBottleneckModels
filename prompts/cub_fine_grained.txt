@@ -1,0 +1,18 @@
+Describe the bird in this image in a single detailed paragraph, focusing only on what is visually observable so it can be distinguished from similar-looking birds.
+
+STRICT RULES:
+1) Do NOT name the species, genus, or any taxonomic/family group.
+2) Refer to it only as "the subject" or "the bird".
+3) Do NOT make comparisons to named species.
+4) Describe only visible details; do not guess.
+5) Write ONE paragraph of 3-6 sentences.
+6) If a feature is not visible, omit it.
+
+Where visible, cover:
+- overall size and body shape, and posture
+- plumage color, pattern, and texture across distinct parts: crown, forehead, nape, throat, breast, belly, back, mantle, rump
+- wings and wing-bars, and tail shape and markings
+- shape and color of the bill/beak and the upper and lower mandibles
+- eye, eye-ring, and supercilium markings
+- leg and foot color
+- the most distinctive field marks and their spatial arrangement

@@ -1,0 +1,14 @@
+Describe the main subject in this image with fine-grained visual details that would help distinguish it from similar-looking objects.
+
+STRICT RULES:
+1) Do NOT name the category/species/object.
+2) Refer to it only as: subject/object/creature/entity.
+3) No comparisons to named categories.
+4) Only visible details; no guesses.
+5) Write ONE paragraph, 2-4 sentences.
+
+Focus on:
+- silhouette and key parts
+- dominant colors and patterns (stripes/spots/logos/patches)
+- material/texture cues (metal/plastic/fur/feathers/rubber/glass)
+- spatial arrangement and 1-2 distinctive traits that stand out
