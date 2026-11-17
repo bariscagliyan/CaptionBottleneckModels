@@ -4,6 +4,10 @@
   <a href="https://arxiv.org/abs/2607.00578"><strong>Paper</strong></a>
   &nbsp;|&nbsp;
   <a href="https://github.com/bariscagliyan/CaptionBottleneckModels"><strong>Code</strong></a>
+  &nbsp;|&nbsp;
+  <a href="https://huggingface.co/papers/2607.00578"><strong>Models</strong></a>
+  &nbsp;|&nbsp;
+  <a href="https://huggingface.co/datasets/bariscagliyan/cabm-captions"><strong>Captions</strong></a>
 </p>
 
 <p align="center">
@@ -49,6 +53,44 @@ or in parallel. Defaults reproduce the paper setup.
 ```bash
 pip install -r requirements.txt
 ```
+
+## Pretrained models and captions
+
+The trained text classifiers and the captions used in the paper are on the Hugging Face Hub.
+
+| Dataset | Captioner | Top-1 (%) | Model |
+|---|---|---|---|
+| CIFAR-10 | Qwen3-VL-2B | 96.42 | [cabm-cifar10](https://huggingface.co/bariscagliyan/cabm-cifar10) |
+| CIFAR-100 | Qwen3-VL-2B | 81.14 | [cabm-cifar100](https://huggingface.co/bariscagliyan/cabm-cifar100) |
+| CUB-200-2011 | Qwen3-VL-2B | 76.92 | [cabm-cub200](https://huggingface.co/bariscagliyan/cabm-cub200) |
+| Food-101 | Qwen3-VL-2B | 93.68 | [cabm-food101](https://huggingface.co/bariscagliyan/cabm-food101) |
+| Flowers-102 | Qwen3-VL-2B | 84.23 | [cabm-flowers102](https://huggingface.co/bariscagliyan/cabm-flowers102) |
+| ImageNet-1K | Qwen3-VL-8B | 73.90 | [cabm-imagenet1k](https://huggingface.co/bariscagliyan/cabm-imagenet1k) |
+
+Captions for all six datasets: [bariscagliyan/cabm-captions](https://huggingface.co/datasets/bariscagliyan/cabm-captions)
+(one JSON line per image, in the input format of `train_classifier.py`).
+
+**Use a released model** (`hf` comes with `pip install -U huggingface_hub`; older versions use `huggingface-cli download`):
+
+```bash
+hf download bariscagliyan/cabm-cub200 --local-dir runs/cabm-cub200
+```
+
+```python
+import torch
+from cabm.classifier import load_trained
+
+model, tok, id2label = load_trained("runs/cabm-cub200", "cuda" if torch.cuda.is_available() else "cpu")
+captions = ["<caption 1>", "<caption 2>"]  # captions of ONE image, from generate_captions.py
+batch = tok(captions, padding=True, truncation=True, max_length=512, return_tensors="pt").to(model.classifier.weight.device)
+with torch.no_grad():
+    logits = model(**batch)["logits"].mean(0)  # logit averaging over captions
+print(id2label[int(logits.argmax())])
+```
+
+Each model folder also works directly as `--model-dir` for `extract_concepts.py`.
+
+---
 
 ## Data format
 
@@ -159,3 +201,19 @@ generate_captions.py   train_classifier.py   extract_concepts.py   # the three s
 cabm/captioning.py     cabm/classifier.py     cabm/concepts.py      # library
 prompts/               examples/              requirements.txt
 ```
+
+## Citation
+
+```bibtex
+@inproceedings{cagliyan2026cabm,
+  title     = {Caption Bottleneck Models},
+  author    = {Cagliyan, Seref Baris and Ozdemir, Umut and Tapli, Merve and Akbas, Emre},
+  booktitle = {Computer Vision -- ECCV 2026},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {17036},
+  pages     = {445--461},
+  publisher = {Springer},
+  year      = {2026}
+}
+```
+
